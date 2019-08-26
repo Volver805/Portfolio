@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SuperDesigenr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <script src="jquery-min.js"></script>
+    <script src='jquery-ui.min.js'></script>
+</head>
+<body onresize="updateShape()">
+    <nav>
+        <div class='navbar'>
+
+            <h1>Ahmed Sayed</h1>
+       
+        </div>    
+    </nav>
+
+    <div class="background">    
+     
+        <div class="about-button">
+            <h1>About</h1>  
+            <p id='about-paragraph'>Tell me about yourself</p>
+        </div>
+
+        <div class="portfolio-button">
+            <h1>Portfolio</h1>
+            <p id='portfolio-paragraph'>Show me your work</p>
+
+        </div>
+
+        <div class="background-image">
+            
+        </div>
+        
+
+        <div class="shape"> 
+  
+        </div>
+        <div class="portfolio-content" >
+            <div class="container">
+               <div class="project" id='1'>
+                        <div class="image-content">
+                            <img id='portfolio-image' src="portfolio.jpg" alt="" srcset="">
+                            <img id='portfolio-phone' src='portfolio-home.jpg'>
+                        </div>
+                        <div class='text-content'>
+                            <h2>Portfolio Website</h2>
+                            <p>this website made with html,css,Javascript and JQuery.</p>
+                            <p class='project-details'>this is my portfolio which is a single .html page actually manpiulated by javascript , animations are made using Jquery and css animations.<br> the source code for this website is available on github. </p>
+                        </div>
+                    
+                </div>
+
+                        <div class="project" id='2'>
+                            <div class="image-content">
+                                <img id='yourzone-image' src="ems.png" alt="" srcset="">
+                            </div>
+                            <div class='text-content'>
+                                <h2>Educational Managment System</h2>
+                                <p>made using Php,MySql & AJAX for backend javascript for front-back manipulation.</p>
+                                <p class='project-details'>a web app made with an MVC design pattern for teachers and students with a single page that's updated using AJAX without any refreshing teachers can create courses and assignments that students can immediately view and interact with  </p>
+                            </div>
+                            <a class='view-live' style='color:#56CCF2' href='https://uglysnipy.000webhostapp.com/ems/' target="_blank">View live version</a>
+                        </div>
+
+                        <div class="project" id='3'>
+                            <div class="image-content">
+                                <img id='yourzone-image' src="yourzone.png" alt="" srcset="">
+                            </div>
+                            <div class='text-content'>
+                                <h2 class='ranga-font'>Social Media website</h2>
+                                <p>social media website made using javascript , jquery , php , mysqli , AJAX.</p>
+                                <p class='project-details'>users can login / register , upload their images and  , view profiles , like ,comment ,share and post , follow and unfollow other users.<br>for more info check the code on github.</p>
+                            </div>
+                            <a class='view-live' style='color:#0059d1' href='https://uglysnipy.000webhostapp.com/Yourzone/' target="_blank">View live version</a>
+
+                        </div>
+                        <button class='view-source' onclick="openLink(1)">Source Code</button>
+
+             </div>
+                        <div class="arrow-wrapper">    
+                            <div class="arrow-down">
+                            </div>
+                            <div class="line"></div>
+                        </div>        
+            </div>
+      
+
+        <div class="about-content">
+            <h1>Hey there,</h1>
+            <h2>I'm a Front-End Web Developer</h2>
+            <h3>Passoinate about web development , teaching and learning new stuff.</h3>
+            <p>I love creating stuff from scratch thats why I chose web development. My tools are <i>html,css,javascript</i> for front-back , <i>Php & MySql</i> for back-end I also love using technologies like <i>AJAX</i> and libraries like <i>JQuery</i> , I've used them to create complex CMS's and web apps that you can check on my portfolio.Currently I'm learning about React & Golang. I also love connecting with other so why not
+                <span id='send-link' >send me a message</span> or visit my <a href="https://twitter.com/ahmmeedsayeed" target="_blank" id='twitter-profile'>twitter profile</a> .</p>
+            <button id='resume-download'>resume.pdf</button>
+                
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <input class='contact-element' type="text" id="contact-email" placeholder="Email">
+        <input class='contact-element' type="text" id="contact-subject" placeholder="Subject">
+        <textarea class='contact-element' type="text" id="contact-message" placeholder="Message"></textarea>
+        <input class='contact-element' id='message-send' type="button" value="Send Message">
+    </div>
+
+        <div class="bottom-bar">
+
+            <a href='https://github.com/Volver805' target="_blank"><img id='github-icon' src="github.png" alt="" srcset=""></a>
+
+            <a class='contact-button'><img id='email-icon' src="email-black.png" alt="" srcset=""></a>
+
+            <a href='https://twitter.com/ahmmeedsayeed' target="_blank"><img id='twitter-icon' src="twitter-black.png" alt="" srcset=""></a>
+
+        </div>
+
+  
+
+    <script src='main.js'></script>
+</body>
+</html>
