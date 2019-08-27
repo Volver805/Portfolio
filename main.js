@@ -98,9 +98,13 @@ const init = () => {
     },150);
 
     $('.portfolio-content').fadeOut(100);
+    document.removeEventListener('touchstart', handleTouchStart, false);        
+    document.removeEventListener('touchmove', handleTouchMove, false);
     window.removeEventListener('wheel',changeProject,true);
     $('.contact-form').fadeOut();
-
+    
+    $('.portfolio-button').removeClass('button-responsive');
+    $('.about-button').removeClass('button-responsive');
 }
 
 const updateShape = ()=> {
@@ -201,7 +205,10 @@ const fun_1 = ()=> {
 
     $('.shape').animate({
         borderWidth:'0px'
-    },'slow');      
+    },'slow');          
+    
+    $('.portfolio-button').addClass('button-responsive');
+    $('.about-button').addClass('button-responsive');
   
     colorChange('github','white');
     colorChange('email','white');
@@ -209,6 +216,9 @@ const fun_1 = ()=> {
     $('.portfolio-content').fadeOut(100);
 
     window.removeEventListener('wheel',changeProject,true);
+    document.removeEventListener('touchstart', handleTouchStart, false);        
+    document.removeEventListener('touchmove', handleTouchMove, false);
+
 }
 
 $('.about-button').click(()=> {
@@ -242,13 +252,17 @@ $('.portfolio-button').click(()=> {
     },100);
     $('.portfolio-content').fadeIn('slow');
     window.addEventListener('wheel',changeProject,true);
+    document.addEventListener('touchstart', handleTouchStart, false);        
+    document.addEventListener('touchmove', handleTouchMove, false);
+
     setTimeout(showProject(i),500);
     $('.bottom-bar').css('height','64px');
     $('.navbar h1').animate({
         fontSize:'24px'
     },400);
     $('.contact-form').fadeOut();
-    
+    $('.portfolio-button').addClass('button-responsive');
+    $('.about-button').addClass('button-responsive');
 })
 
 $('.navbar h1').click(()=>
@@ -272,7 +286,7 @@ const sendMessage = ()=> {
                 url:'mail.php',
                 data:`email=${email}&sub=${sub}&message=${message}`,
                 success : result => {
-                    if(result == 'success') {
+                    if(result != 'error') {
                     $('#contact-email').val('');
                     $('#contact-subject').val('');
                     $('#contact-message').val('');
@@ -282,7 +296,7 @@ const sendMessage = ()=> {
                          $('#message-send').val('send message');
                          $('#message-send').removeClass('email-sent');
                      },2000);
-                    }
+                    }else { alert(result) }
                 }
             });
         }
@@ -314,4 +328,4 @@ $('#contact-email,#contact-subject').click(()=>{
     $('.contact-element').css('border','0');
 })
 hoverListener('about');
-hoverListener('portfolio');
+hoverListener('portfolio');		

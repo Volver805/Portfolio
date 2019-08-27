@@ -114,7 +114,7 @@ nav {
 
 }
 .bottom-bar:hover {
-    height:80px;
+    height:80px !important;
 }
 .bottom-bar img {
      
@@ -146,7 +146,7 @@ nav {
 }
 .about-content p {
     margin-top:40px;
-    font-size:calc(1.2em + 0.6vw);
+    font-size:calc(1em + 0.7vw);
 }
 #twitter-profile {
     color:#1ECEF4;
@@ -179,18 +179,42 @@ nav {
     outline:white;
 }
 @media only screen and (max-width: 820px) {
+    nav {
+        height:40px !important;
+    }
     .navbar h1{
-        font-size:18px;
+        font-size:16px !important;
+    }
+    .portfolio-button {
+        right:10%;
+    }
+    .about-button {
+        left:5%;
+    }
+    .button-responsive {
+        display:none;
     }
     #resume-download {
         margin-top:60px
     }
+ 
     .about-content  {
         top:70px;
     }
     .about-content p {
         margin-top:20px !important;
     }
+    .bottom-bar {
+        height:45px !important;
+    }
+    .about-content {
+        width:80%;
+        margin-left:10%;
+    }
+    .about-content p {
+        font-weight:bold;
+    }
+
 }
 @media only screen and (max-width:1200px) {
     .portfolio-content{ 
@@ -201,32 +225,52 @@ nav {
         height:70px !important;
         width:170px !important;
     }
+ 
 }
 @media only screen and (max-width:1018px){
     .portfolio-content {
         width:100% !important;
         left:0% !important;
     }
-    #yourzone-image {
-        display: block !important;
-        position: relative !important;
-        width:450px !important;
-        margin:0 auto !important;
-   
-    }
+  
 
 
 }
+    #ems-image img {
+        width:100%;
+    }
 
 @media only screen and (max-width:800px) {
+    #yourzone-image img{
+        display: block !important;
+        position: relative !important;
+        width:70% !important;
+        margin:0 auto !important;
+   
+    }
+    #ems-image img{
+        width:40% !important;
+        min-width:300px;
+        }
     .portfolio-content {
-        top:8% !important;
+        top:5% !important;
         height:75% !important;
     }
     .image-content {
         width:100% !important;  
         height:37% !important;
         position:relative !important;
+        text-align: center;
+    }
+    .view-live {
+        font-size:10px !important;
+    }
+    #ems-image {
+        height:30% !important;
+    }
+  
+    #ems-title {
+        font-size:20px !important;
     }
     .text-content {
         width:90% !important;
@@ -255,6 +299,10 @@ nav {
     #portfolio-phone {
         max-width:150px;
         left:50%;
+    }
+    #yourzone-image {
+        height:32% !important;
+        margin-top:1% !important;
     }
 }
 .portfolio-content {
@@ -396,6 +444,9 @@ nav {
 #yourzone-image {
     width:100%;
     margin-top:10%;
+}
+#yourzone-image img{ 
+    width:50% ;
 }
 .view-live {
     font-family:'roboto';
